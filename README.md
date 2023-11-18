@@ -20,6 +20,7 @@ Check: https://github.com/DcardosoGH/MacroPayloadBuilder/releases
    - Option 1 requires a server hosting "Powercat.ps1" and will use `IEX` to download and execute in memory.
    - Opton 2 is a standard powershell reverse-shell using ``New-Object System.Net.Sockets.TCPClient``
    - Option 3 encodes the payload with base64 encoding.
+   - Option 4 runs a `cmd /c Powershell` command on the target.
 - Copy the Macro generated to your Document.
 
 ### Example:
