@@ -18,6 +18,7 @@ internal class Program
             Console.WriteLine("1: Encoded Powercat downloaded into memory (needs a server hosting Powercat.ps1 on the same IP as LHOST)");
             Console.WriteLine("2: Powershell standard");
             Console.WriteLine("3: Powershell base64 encoded");
+            Console.WriteLine("4: Powershell cmd.exe /c method (base64)");
             Console.WriteLine("E: exit");
             string option = Console.ReadLine();
 
@@ -34,6 +35,10 @@ internal class Program
                 case "3":
                     payloads.powershellEncoded(lhost, lport);
                     exit= true;
+                    break;
+                case "4":
+                    payloads.powershellCMDEncoded(lhost, lport);
+                    exit = true;
                     break;
                 case "E" or "e":
                     Environment.Exit(0);
