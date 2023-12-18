@@ -17,10 +17,11 @@ Check: https://github.com/DcardosoGH/MacroPayloadBuilder/releases
 ### Usage:
 - Enter your LHOST and LPORT
 - Choose your desired payload:
-   - Option 1 requires a server hosting "Powercat.ps1" and will use `IEX` to download and execute in memory.
-   - Opton 2 is a standard powershell reverse-shell using ``New-Object System.Net.Sockets.TCPClient``
-   - Option 3 encodes the payload with base64 encoding.
-   - Option 4 runs a `cmd /c Powershell` command on the target.
+	- Option 1 is to use with Cobalt Strike's Scripted Web Delivery, it requires LHOST (can be hostname), LPORT and a URI.
+   - Option 2 requires a server hosting "Powercat.ps1" and will use `IEX` to download and execute in memory.
+   - Opton 3 is a standard powershell reverse-shell using ``New-Object System.Net.Sockets.TCPClient``
+   - Option 4 encodes the payload with base64 encoding.
+   - Option 5 runs a `cmd /c Powershell` command on the target.
 - Copy the Macro generated to your Document.
 
 ### Example:
